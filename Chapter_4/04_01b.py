@@ -3,8 +3,8 @@
  
 #Import packages
 
+#Configure page
 
-#st.set_page_config(page_title="Chat UI", layout="wide") SEE IF I NEED THIS
 
 #Write title
 
@@ -12,7 +12,7 @@
 #Determine if chat history exists in the session state and initialize if it doesn't
 
 
-#Define function to hand sending messages and receiving LLM responses  
+#Define function to handle sending messages and receiving LLM responses  
 
     #Get user input and remove whitespaces
 

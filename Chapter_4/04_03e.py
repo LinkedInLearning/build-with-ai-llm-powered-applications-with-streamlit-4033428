@@ -18,6 +18,9 @@ with open("openai_key.txt") as f:
 #Initialize OpenAI client with your API key
 client = OpenAI(api_key=my_api_key)
 
+#Configure page
+st.set_page_config(page_title="Chat UI")
+
 #Write title
 st.title("Error Handling")
 

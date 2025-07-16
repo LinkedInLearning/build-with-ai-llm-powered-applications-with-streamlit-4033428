@@ -18,6 +18,9 @@ with open("openai_key.txt") as f:
 #Initialize OpenAI client with your API key
 client = OpenAI(api_key=my_api_key)
 
+#Configure page
+st.set_page_config(page_title="Chat UI")
+
 #Write title
 st.title("Integrate RAG in Streamlit App")
 
@@ -37,7 +40,7 @@ def load_vector_store():
         df["Tour_Itinerary"].fillna("")
     ).str.strip()
 
-    #Create lise of combined text entries, excluding empty strings
+    #Create list of combined text entries, excluding empty strings
     text_data = df["combined_text"].loc[df["combined_text"] != ""].tolist()
 
     #Convert text entries into document objects

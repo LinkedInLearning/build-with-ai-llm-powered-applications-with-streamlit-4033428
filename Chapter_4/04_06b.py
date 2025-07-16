@@ -17,6 +17,9 @@ with open("openai_key.txt") as f:
 #Initialize OpenAI client with your API key
 client = OpenAI(api_key=my_api_key)
 
+#Configure page
+st.set_page_config(page_title="Chat UI")
+
 #Write title
 st.title("")
 
@@ -130,7 +133,7 @@ def send_and_feedback():
             st.success("Response generated!")
 
         except Exception as e:
-            #Handle A{I errors}
+            #Handle AI errors
             st.error(f"Failed to get response: {e}")
             #Log error type and corresponding message
 

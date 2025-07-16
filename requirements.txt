@@ -1,8 +1,8 @@
-streamlit
-openai
-pandas
-faiss-cpu
-numpy
-langchain
-pytest
+streamlit>=1.35.0
+openai>=1.30.0
+faiss-cpu>=1.8.0
+pandas>=2.2.0
+numpy>=1.26.0
+langchain>=0.3.0
+pytest>=8.2.1
 logging

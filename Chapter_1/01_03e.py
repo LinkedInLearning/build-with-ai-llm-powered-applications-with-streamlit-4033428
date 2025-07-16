@@ -17,5 +17,5 @@ text = st.text_input("Enter some text")
 st.write("You typed:", text)
 
 #Create multiselect widget
-options = st.multiselect("Choose toppings", ["Cheese", "Pepperoni", "Onions"])
+options = st.multiselect("Choose pizza toppings", ["Cheese", "Pepperoni", "Onions"])
 st.write("Toppings:", options)

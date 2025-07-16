@@ -4,7 +4,8 @@
 #Import packages
 import streamlit as st
 
-#st.set_page_config(page_title="Chat UI", layout="wide") SEE IF I NEED THIS
+#Configure page
+st.set_page_config(page_title="Chat UI")
 
 #Write title
 st.title("Build Chat UI")
@@ -13,7 +14,7 @@ st.title("Build Chat UI")
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
-#Define function to hand sending messages and receiving LLM responses  
+#Define function to handle sending messages and receiving LLM responses  
 def send_message():
     #Get user input and remove whitespaces
     user_msg = st.session_state.user_msg.strip()
