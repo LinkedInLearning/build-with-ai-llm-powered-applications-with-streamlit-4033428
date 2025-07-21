@@ -5,15 +5,14 @@
 import streamlit as st
 from openai import OpenAI
 import pandas as pd
-import logging, time, traceback
+import logging, time, traceback, os
 from langchain.docstore.document import Document
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 
-#Open file with API key
-with open("openai_key.txt") as f:
-    my_api_key = f.read().strip()
+#Gather API key
+my_api_key = os.getenv("OPENAI_API_KEY")
 
 #Initialize OpenAI client with your API key
 client = OpenAI(api_key=my_api_key)
