@@ -30,12 +30,12 @@ def load_vector_store():
     #Combine text fields into a single column for embedding
     df["combined_text"] = (
         df["Tour_Name"].fillna("") + ". " +
-        df["Tour_Description"].fillna("") + " " +
-        df["Tour_Summary"].fillna("") + " " +
-        df["Tour_Keywords"].fillna("") + " " +
-        df["Tour_Itinerary"].fillna("")
+        df["Tour_Description"].fillna("") + ". " +
+        df["Tour_Summary"].fillna("") + ". " +
+        df["Tour_Keywords"].fillna("") + ". " +
+        df["Tour_Itinerary"].fillna("") + "."
     ).str.strip()
-
+    
     #Create lise of combined text entries, excluding empty strings
     text_data = df["combined_text"].loc[df["combined_text"] != ""].tolist()
 

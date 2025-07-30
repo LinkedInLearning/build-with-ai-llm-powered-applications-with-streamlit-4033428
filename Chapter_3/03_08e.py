@@ -28,10 +28,10 @@ if user_query:
     #Combine text fields into a single column for embedding
     df["combined_text"] = (
         df["Tour_Name"].fillna("") + ". " +
-        df["Tour_Description"].fillna("") + " " +
-        df["Tour_Summary"].fillna("") + " " +
-        df["Tour_Keywords"].fillna("") + " " +
-        df["Tour_Itinerary"].fillna("")
+        df["Tour_Description"].fillna("") + ". " +
+        df["Tour_Summary"].fillna("") + ". " +
+        df["Tour_Keywords"].fillna("") + ". " +
+        df["Tour_Itinerary"].fillna("") + "."
     ).str.strip()
 
     #Generate embeddings for text data
@@ -79,7 +79,7 @@ if user_query:
                   {"role": "user", "content": prompt}]
     )
 
-    ##Gather assistant's response
+    #Gather assistant's response
     st.subheader("Answer")
     st.write(response.choices[0].message.content.strip())
 

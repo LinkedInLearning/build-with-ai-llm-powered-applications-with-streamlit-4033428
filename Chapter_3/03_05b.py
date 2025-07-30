@@ -22,10 +22,10 @@ df = pd.read_excel("Explore_California_Tour_Packages.xlsx")
 #Combine text fields into a single column for embedding
 df["combined_text"] = (
     df["Tour_Name"].fillna("") + ". " +
-    df["Tour_Description"].fillna("") + " " +
-    df["Tour_Summary"].fillna("") + " " +
-    df["Tour_Keywords"].fillna("") + " " +
-    df["Tour_Itinerary"].fillna("")
+    df["Tour_Description"].fillna("") + ". " +
+    df["Tour_Summary"].fillna("") + ". " +
+    df["Tour_Keywords"].fillna("") + ". " +
+    df["Tour_Itinerary"].fillna("") + "."
 ).str.strip()
 
 #Generate embeddings for text data

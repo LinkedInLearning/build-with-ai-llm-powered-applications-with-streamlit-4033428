@@ -33,4 +33,3 @@
     #Call the patched OpenAI API method
 
     #Assert the fake response content matches the expected dummy reply
-

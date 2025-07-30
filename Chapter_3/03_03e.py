@@ -28,10 +28,10 @@ def prepare_text(df: pd.DataFrame) -> pd.DataFrame:
     #Combine text fields into a single column for embedding
     df["combined_text"] = (
         df["Tour_Name"] + ". " +
-        df["Tour_Description"] + " " +
-        df["Tour_Summary"] + " " +
-        df["Tour_Keywords"] + " " +
-        df["Tour_Itinerary"]
+        df["Tour_Description"] + ". " +
+        df["Tour_Summary"] + ". " +
+        df["Tour_Keywords"] + ". " +
+        df["Tour_Itinerary"] + "."
     ).str.strip()
     
     return df

@@ -3,7 +3,6 @@
 
 #Import packages
 
-
 #Write title and text
 
 #Gather current date and time
